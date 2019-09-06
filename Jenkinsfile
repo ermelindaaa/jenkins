@@ -9,7 +9,7 @@ node {
                 sh 'docker images'
               }
               catch(Exception e){
-                slackSend message: e
+                slackSend message: "$e"
               }
               
     }
