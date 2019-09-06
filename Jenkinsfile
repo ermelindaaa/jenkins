@@ -1,7 +1,7 @@
 node {
   stage("Tes") 
   {
-  echo 'Hello A!'
+  echo 'Hello B!'
   }
   stage("Slack message")
             {
