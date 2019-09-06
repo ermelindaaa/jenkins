@@ -3,7 +3,7 @@ node {
   {
     try{
         echo 'Hello A!'
-        docker get image
+        
     } 
     catch(Exception e){
                 slackSend message: "$e"
