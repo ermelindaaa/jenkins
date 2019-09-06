@@ -2,7 +2,7 @@ node {
   stage("Test") 
   {
     try{
-        echo 'Hello AB!'
+        echo 'Hello B!'
        
     } 
     catch(Exception e){
