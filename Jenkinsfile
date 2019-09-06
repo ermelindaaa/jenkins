@@ -2,15 +2,16 @@ node {
   stage("Tes") 
   {
     try{
-        echo 'Hello A!'
-    }
+        echo Hello A!'
+    } 
+    catch(Exception e){
+                slackSend message: "$e"
+                return
+              }
   }
   stage("Slack message")
-            {
-              catch(Exception e){
-                slackSend message: "$e"
-              }
-              
+  {
+            slackSend message: "build finished"              
     }
 }
   
