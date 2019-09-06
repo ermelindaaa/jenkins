@@ -1,11 +1,17 @@
 node {
-  stage("Test') 
+  stage("Tes") 
   {
   echo 'Hello B!'
   }
   stage("Slack message")
             {
-                slackSend message:"build finished "
-            }
+              try{
+                sh 'docker images'
+              }
+              catch(Exception e){
+                slackSend message: e
+              }
+              
+    }
 }
   
