@@ -7,7 +7,7 @@ node {
     } 
     catch(Exception e){
                 slackSend message: "$e"
-                return
+                exit
               }
   }
   stage("Slack message")
