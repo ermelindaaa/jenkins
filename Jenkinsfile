@@ -2,7 +2,8 @@ node {
   stage("Tes") 
   {
     try{
-        echo Hello A!'
+        echo 'Hello A!'
+        docker get image
     } 
     catch(Exception e){
                 slackSend message: "$e"
